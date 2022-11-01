@@ -85,6 +85,15 @@ class Menu {
     viewCompany() {
         let index = prompt('Enter the index of the company you want to view:');
         if (index > -1 && index < this.companies.length) {
+            this.slectedCompany = this.companies[index];
+            let description = 'Company name : ' + this.selectedCompany.name + '\n';
+
+            for (let i = 0; i < this.selectedCompany.employees.length; i++) {
+                description += i + ') ' + this.selectedCompany.employees[i].name + ' - ' + this.selectedTeam.players[i].position + '\n';
+            }
+        }
+        let selection = this.showCompanyMenuOptions(description);
+        switch (selection) {
 
         }
     }
