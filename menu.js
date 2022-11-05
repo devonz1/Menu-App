@@ -6,9 +6,10 @@ class Employee {
         this.age = age;
     }
     describe() {
-        return `${this.firstName} is a ${this.position} `;
+        return `${this.firstName} is a ${this.position}. `;
     }
 }
+
 
 class Company {
     constructor(name) {
@@ -20,14 +21,15 @@ class Company {
         if (employee instanceof Employee) {
             this.employees.push(employee);
         } else {
-            throw new Error(`You can only add an instance of Employee. Argument is not an employee:${employee}`);
+            throw new Error(`You can only add an instance of Employee. Argument is not an employee:${employee}`
+            );
         }
     }
+
 
     describe() {
         return `${this.firstName} is ${this.age}`;
     }
-
 }
 
 class Menu {
@@ -37,7 +39,7 @@ class Menu {
     }
 
     start() {
-        let selection = showMainMenuOptions();
+        let selection = this.showMainMenuOptions();
         while (selection != 0) {
             switch (selection) {
                 case '1':
@@ -70,17 +72,34 @@ class Menu {
          4) display all companies
         `);
     }
+
+    showCompanyMenuOptions(companyInfo) {
+        return prompt(`
+         0) back
+         1) create employee
+         2) delete employee
+         ------------------------
+         ${companyInfo}
+
+        `);
+    }
+
+
     displayCompanies() {
         let companyString = '';
         for (let i = 0; i < this.companies.length; i++) {
             companyString += i + ') ' + this.companies[i].name + '\n';
         }
-        alert(teamString);
+
+        alert(companyString);
     }
+
+
     createcompany() {
         let name = prompt('enter name for new company:');
         this.companies.push(new Company(name));
     }
+
 
     viewCompany() {
         let index = prompt('Enter the index of the company you want to view:');
@@ -89,13 +108,23 @@ class Menu {
             let description = 'Company name : ' + this.selectedCompany.name + '\n';
 
             for (let i = 0; i < this.selectedCompany.employees.length; i++) {
-                description += i + ') ' + this.selectedCompany.employees[i].name + ' - ' + this.selectedTeam.players[i].position + '\n';
+                description += i + ') ' + this.selectedCompany.employees[i].name
+                    + ' - ' + this.selectedCompany.employees[i].position + '\n';
             }
-        }
-        let selection = this.showCompanyMenuOptions(description);
-        switch (selection) {
 
+            let selection = this.showCompanyMenuOptions(description);
+            switch (selection) {
+                case '1':
+                    this.createEmployee();
+                    break;
+                case '2':
+                    this.deleteEmployee();
+            }
         }
     }
 }
 
+
+
+let menu = new Menu();
+menu.start();
