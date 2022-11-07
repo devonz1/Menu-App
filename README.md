@@ -1,6 +1,6 @@
 # Menu-App
-
-
+<br>
+    <h2>Company Menu App</h2> 
 <p> This is a Object Oriented Menu App that was created with Classes and objects .<br>
     The User has the option to create a Company Save it and view the different 
   Companies that have been saved.
