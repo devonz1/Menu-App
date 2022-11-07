@@ -71,7 +71,7 @@ class Menu {
          3) delete company
          4) display all companies
         `);
-    }
+    } 
 
     showCompanyMenuOptions(companyInfo) {
         return prompt(`
@@ -122,9 +122,9 @@ class Menu {
             }
         }
     }
+ 
+ 
 }
-
-
 
 let menu = new Menu();
 menu.start();
