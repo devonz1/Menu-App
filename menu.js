@@ -1,8 +1,7 @@
 class Employee {
-    constructor(firstName, lastName, position, age, company) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.postion = position;
+    constructor(name, position, age) {
+        this.name = name;
+        this.position = position;
         this.age = age;
     }
     describe() {
@@ -71,7 +70,7 @@ class Menu {
          3) delete company
          4) display all companies
         `);
-    } 
+    }
 
     showCompanyMenuOptions(companyInfo) {
         return prompt(`
@@ -122,8 +121,17 @@ class Menu {
             }
         }
     }
- 
- 
+    createEmployee() {
+        let name = prompt('Enter name for new employee:');
+        let position = prompt('Enter position for new employee');
+        this.selectedCompany.employees.push(new Employee(name, position));
+    }
+    deleteEmployee() {
+        let index = prompt('Enter the index of the employee you wish to delete:');
+        if (index > -1 && index < this.selectedCompany.employees.length) {
+            this.selectedCompany.employees.splice(index, 1);
+        }
+    }
 }
 
 let menu = new Menu();
