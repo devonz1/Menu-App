@@ -8,4 +8,9 @@
     the option to delete a employee or company as well. 
 </p> 
 
-<img src = "https://github.com/devonz1/Menu-App/blob/main/mennu%20app%20screenshot.png">
+<img src = "https://github.com/devonz1/Menu-App/blob/main/mennu%20app%20screenshot.png"><br>
+<img src = "https://github.com/devonz1/Menu-App/blob/main/company%20screenshot.png"><br>
+<img src = "https://github.com/devonz1/Menu-App/blob/main/company%20screenshot%202.png">
+ 
+ 
+
