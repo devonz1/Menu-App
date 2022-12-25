@@ -1,0 +1,19 @@
+{
+  "name": "menu-app",
+  "version": "1.0.0",
+  "description": "<br>\r     <h2>Company Menu App</h2> \r <p> This is a Object Oriented Menu App that was created with Javascript Classes .<br>\r     The User has the option to create a Company Save it and add multiple employees to \r     the company as well as their postition withtin the company to keep track of each employee and \r     the company they work for as well as the Position they hold within the company. The user also has\r     the option to delete a employee or company as well. \r </p>",
+  "main": "menu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devonz1/Menu-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devonz1/Menu-App/issues"
+  },
+  "homepage": "https://github.com/devonz1/Menu-App#readme"
+}
